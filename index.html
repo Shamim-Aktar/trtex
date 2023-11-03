@@ -16,32 +16,55 @@
         padding: 0;
       }
 
-      .adjust-height{
-        height:100% !important;
+      .grid-container{
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap:0 10px;
+      }  
+      .flex-container{
+           display: flex; 
+          justify-content: space-between; 
+          flex-wrap: wrap;
+          gap:0 3px;
       }
-      .colum3{
-        max-height:480px;
-        ;
-      }
-      .colum3 img{
-        height: 100%;
-        width: 100%
-      }
-   /*   .bootasaree .col{
-        padding:5px 3px !important;
-      }*/
-      @media(max-width:500px){
-        .navbar-brand{
-          height: 25px;
-        }
-               .navbar-brand img{
-          width: 412px;
-  }
 
-  .colum3 img{
-    height: 70%;
-  }
+      .grid-container .item{
+         padding: 20px 0;
       }
+
+     .grid-container .item img{
+        max-width: 100%;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+      }
+
+      .flex-container .item img{
+           height: 100%;
+    width: 100%;
+    max-width: 367px;
+    max-height: 450px;
+    
+      }
+
+      .flex-container .item{
+        width: 32.3%;
+      }
+
+      @media (max-width:480px) {
+        .three-col-container .item img{
+          max-width: 170px;
+          max-height: 300px;
+        }
+
+        .three-col-container{
+          gap:5px;
+        }
+      }
+
+    
  
     </style>
   </head>
@@ -115,26 +138,26 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       
        
+          <div class='grid-container'>
+              <div class='item item1'>
+                <img src="banarsianchal.jpg" >
+              </div>
+              <div class='item item2'>
+                <img src="photo1.jpg">
+              </div>
 
+          </div>
 
-        <div class="row gx-3">
-            <div class="col pt-5">
-          <img src="banarsianchal.jpg" class="img-fluid adjust-height" style="width:100%">
-        </div>
-         <div class="col pt-5">
-          <img src="photo1.jpg" class="img-fluid adjust-height" style="width:100%">
-        </div>
-      </div>
-        <div class="second-section mt-3">
-            <div class="row">
-          <div class="col colum3">
-            <img src="zarri.jpg" class="img-fluid"  >
+        <div class="second-section">
+            <div class="flex-container">
+          <div class="item">
+            <img src="zarri.jpg" >
           </div>
-          <div class="col colum3">
-            <img src="cottonzari.jpg " class="img-fluid" >
+          <div class="item">
+            <img src="cottonzari.jpg " >
           </div>
-          <div class="col colum3">
-            <img src="cottonbut11.jpg" class="img-fluid" >
+          <div class="item">
+            <img src="cottonbut11.jpg" >
           </div>
         </div>
       
@@ -158,12 +181,12 @@
 </div>
     </section>
 
-    <section class="third">
+    <section class="third pt-3">
      
 
       <div class="container">
         
-          <div class="row bootasaree my-1 g-2">
+          <div class="row row-cols-3 gx-2 gy-2">
           <div class="col">
             <img src="zb1.jpg" class="img-fluid"  >
           </div>
@@ -173,9 +196,6 @@
           <div class="col">
             <img src="zb3.jpg" class="img-fluid" >
           </div>
-        </div>
-
-          <div class="row my-1  bootasaree g-2">
           <div class="col">
             <img src="b1.jpg" class="img-fluid"  >
           </div>
