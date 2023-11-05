@@ -11,11 +11,16 @@
     <title>Trtex</title>
     <style>
       html, body { overflow-x: hidden; }
-      *{
-        margin:0;
-        padding: 0;
-      }
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+ ::before,
+ ::after {
+  box-sizing: inherit;
+}
       .grid-container{
         display:grid;
         grid-template-columns: auto auto;
@@ -53,11 +58,42 @@
         width: 32.3%;
       }
 
+        .flex-container .item1{
+        width: 100%;
+        height:max-content;
+      }
+      .grid-container1{
+          display: grid;
+         grid-template-columns: auto auto auto auto;
+        gap: 10px;
+      }
+
+      .grid-container1 .grid-item1 img{
+          width: 100%;
+    height: 100%;
+      }
+
+      .grid-container1 .grid-item1{
+        height:350px;
+      }
+      .grid-item img{
+        width:100%;
+        max-height:75%;
+      }
+
       @media (max-width:480px) {
         .three-col-container .item img{
           max-width: 170px;
           max-height: 300px;
         }
+
+        .flex-container .item img{
+          height: 78%;
+        }
+
+          .grid-container1 .grid-item1{
+        height:150px;
+      }
 
         .three-col-container{
           gap:5px;
@@ -161,12 +197,12 @@
           </div>
         </div>
       
-               <div class="row gx-3 pt-3">
-          <div class="col">
+               <div class="flex-container my-3">
+         <!--  <div class="col">
             <img src="reshamboota.jpg" class="img-fluid" style="height:100%;" >
-          </div>
-          <div class="col">
-            <img src="banarsi.jpg" class="img-fluid" style="height: 100%;" >
+          </div> -->
+          <div class="item1">
+            <img src="banarsi.jpg" class="img-fluid" style="height: 60%;width:100%;" >
           </div>
         </div>
 
@@ -214,17 +250,51 @@
     
 
         <section class="handloom-section">
-      <h2 class="title">Handloom section</h2>
+      <h2 class="title">Collectives</h2>
 
                 <div class="container">
+
+
+                    <div class='grid-container1'>
+                          <div class='grid-item1'>
+                              <img src='images/anchalbanarsi.jpg'/>
+                          </div>
+                           <div class='grid-item1'>
+                              <img src='images/buti.jpg'/>
+                          </div>
+                            <div class='grid-item1'>
+                              <img src='images/anchal11.jpg'/>
+                          </div>
+                            <div class='grid-item1'>
+                              <img src='images/shifon1.jpg'/>
+                          </div>
+                           <div class='grid-item1'>
+                              <img src='images/shifon2.jpg'/>
+                          </div>
+                            <div class='grid-item1'>
+                              <img src='images/anchal1.jpg'/>
+                          </div>
+                            <div class='grid-item1'>
+                              <img src='images/zariflower.jpg'/>
+                          </div>
+                           <div class='grid-item1'>
+                              <img src='images/zarianchal2.jpg'/>
+                          </div>
+                       <!--      <div class='grid-item'>
+                              <img src='images/anchal11.jpg'/>
+                          </div> -->
+                    </div>
+
                       <div class="row">
             <div class="col pt-5">
+              <h1>Handlooom History</h1>
           <img src="handloomred.jpeg" class="img-fluid" style="width:100%">
         </div>
-        <p class="pt-5">Handloom is a traditional craft which is practised by millions of people around the world. It's a skill passed down from generation to generation, with each person adding their personal touch to work. Handloom is an art that uses natural dyes and depends on them for their beauty and vibrancy.
-          Handloom weaving first originated in ancient India. It was used as a form of resistance against foreign invaders and British colonists who sought to suppress native culture by banning everything from hand-spun cotton fabrics to silk saris woven by Indians.
-        </p>
+     
         <div class="handloom-image-container">
+          <p class='mt-2'>
+            Handloom is a traditional craft which is practised by millions of people around the world. It's a skill passed down from generation to generation, with each person adding their personal touch to work. Handloom is an art that uses natural dyes and depends on them for their beauty and vibrancy. Handloom weaving first originated in ancient India. It was used as a form of resistance against foreign invaders and British colonists who sought to suppress native culture by banning everything from hand-spun cotton fabrics to silk saris woven by Indians.
+          </p>
             <div class="row">
           <div class="col">
             <img src="handloomgreen.jpeg" class="img-fluid" style="height:100%;" >
